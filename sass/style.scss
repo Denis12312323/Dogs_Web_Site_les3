@@ -234,7 +234,13 @@ body {
     }
 }
 
-.header {}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+}
 
 .header__container {
     min-height: 152px;
@@ -630,6 +636,10 @@ body {
     font-weight: 400;
     line-height: normal;
     margin-bottom: 15px;
+    &::after{
+        content: "";
+
+    }
 }
 
 .footer-menu__list {
@@ -667,6 +677,11 @@ body {
     @media (max-width:992px) {
         & {
             column-gap: 15px;
+        }
+    }
+    @media (max-width:768px) {
+        & {
+            justify-content: space-between;
         }
     }
 }
